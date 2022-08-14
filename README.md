@@ -29,7 +29,7 @@ flow accounts create --key <PUBLIC_KEY> --signer emulator-account
 },
 
 // Init collection
-flow transactions send src/flow/transaction/InitCollection.cdc —-signer <ACCOUNT_NAME_IN_FLOW.JSON>
+flow transactions send src/flow/transaction/InitCollection.cdc --signer <ACCOUNT_NAME_IN_FLOW.JSON>
 
 // Transfer NFT to test-account
 flow transactions send src/flow/transaction/TransferToken.cdc 1 <ADDRESS>
@@ -41,7 +41,7 @@ flow scripts execute src/flow/script/GetTokenOwner.cdc <TOKEN_ID>
 flow scripts execute src/flow/script/GetTokenMetadata.cdc <TOKEN_ID>
 
 // Get all token ids
-flow scripts execute src/flow/script/GetTokenIds.cdc
+flow scripts execute src/flow/script/GetAllTokenIds.cdc
 ```
 
 ## Available Scripts
